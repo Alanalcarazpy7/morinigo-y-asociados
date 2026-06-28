@@ -17,18 +17,28 @@ const tel1 = company.phones[1]?.replace(/\s+/g, "");
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     const data = new FormData(e.target);
     // Honeypot check
     if (data.get("website_url")) return;
     setLoading(true);
-    // Simula envío — preparado para conectar con Resend/Brevo/API
-    setTimeout(() => {
+    setError("");
+    try {
+      const res = await fetch("/api/contact", { method: "POST", body: data });
+      const json = await res.json();
+      if (json.ok) {
+        setSubmitted(true);
+      } else {
+        setError(json.error || "No se pudo enviar la consulta. Intente por WhatsApp.");
+      }
+    } catch {
+      setError("Error de conexión. Por favor intente nuevamente o use WhatsApp.");
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-    }, 700);
+    }
   }
 
   return (
@@ -276,7 +286,23 @@ export default function ContactPage() {
                     aria-hidden="true"
                   />
 
-                  <div className="form-actions">
+                   {error && (
+                    <p
+                      role="alert"
+                      style={{
+                        margin: "0 0 12px",
+                        padding: "10px 14px",
+                        background: "#fff5f5",
+                        border: "1px solid #fca5a5",
+                        borderRadius: "6px",
+                        fontSize: "0.84rem",
+                        color: "#b91c1c",
+                      }}
+                    >
+                      {error}
+                    </p>
+                  )}
+                   <div className="form-actions">
                     <button
                       className="button button--primary"
                       type="submit"

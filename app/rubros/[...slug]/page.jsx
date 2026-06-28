@@ -5,8 +5,9 @@ import { legalCategories, getCategoryBySlug } from "@/data/legalResources";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export async function generateMetadata({ params }) {
-  const slug = await params.slug;
-  const category = getCategoryBySlug(slug);
+  const { slug } = await params;
+  const slugArray = Array.isArray(slug) ? slug : [slug].filter(Boolean);
+  const category = getCategoryBySlug(slugArray);
   const title = category ? category.title : "Archivo legal";
   return {
     title: `${title} | Informaciones útiles | Morínigo & Asociados`,
@@ -14,14 +15,15 @@ export async function generateMetadata({ params }) {
       ? category.description
       : "Archivo legal histórico de Morínigo & Asociados. Para consultas actualizadas contacte con la firma.",
     alternates: {
-      canonical: `https://www.morinigoyasociados.com.py/rubros/${slug.join("/")}`,
+      canonical: `https://www.morinigoyasociados.com.py/rubros/${slugArray.join("/")}`,
     },
   };
 }
 
 export default async function RubroPage({ params }) {
-  const slug = await params.slug;
-  const category = getCategoryBySlug(slug);
+  const { slug } = await params;
+  const slugArray = Array.isArray(slug) ? slug : [slug].filter(Boolean);
+  const category = getCategoryBySlug(slugArray);
 
   const waUrl = getWhatsAppUrl(
     category

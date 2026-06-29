@@ -44,7 +44,7 @@ export default function ContactPage() {
   return (
     <>
       {/* ——— HERO COMPACTO ——— */}
-      <section className="contact-hero" aria-label="Contacto">
+      <section className="page-hero" aria-label="Contacto">
         <Container>
           <Breadcrumbs items={[{ label: "Contacto" }]} />
           <h1>Contacto</h1>
@@ -56,7 +56,7 @@ export default function ContactPage() {
       </section>
 
       {/* ——— LAYOUT DOS COLUMNAS ——— */}
-      <section aria-label="Información y formulario de contacto">
+      <section className="section section--surface" aria-label="Información y formulario de contacto">
         <Container>
           <div className="contact-layout">
             {/* ——— COLUMNA IZQUIERDA ——— */}

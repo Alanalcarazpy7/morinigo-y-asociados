@@ -1,5 +1,6 @@
 import Container from "@/components/ui/Container";
 import CTA from "@/components/ui/CTA";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
 
 const links = [
   { title: "Dirección Nacional de Ingresos Tributarios", href: "https://www.dnit.gov.py/" },
@@ -14,6 +15,7 @@ export default function LinksPage() {
     <>
       <section className="page-hero">
         <Container>
+          <Breadcrumbs items={[{ label: "Páginas amigas" }]} />
           <p className="eyebrow">Páginas amigas</p>
           <h1>Enlaces institucionales de interés</h1>
           <p>Accesos útiles para empresas, contribuyentes y usuarios que necesitan realizar consultas o gestiones oficiales.</p>

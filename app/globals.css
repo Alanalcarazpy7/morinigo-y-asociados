@@ -39,7 +39,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   line-height: 1.1;
   font-weight: 700;
@@ -1984,7 +1989,6 @@ img {
   grid-template-columns: 1fr 1.4fr;
   gap: 28px;
   align-items: start;
-  padding: clamp(44px, 5vw, 72px) 0;
 }
 
 /* Info card */

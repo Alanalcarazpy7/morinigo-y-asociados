@@ -1,6 +1,6 @@
 import { company } from "@/data/company";
 
-export function buildMetadata({ title, description, path = "/", image = "/og-morinigo.png" }) {
+export function buildMetadata({ title, description, path = "/", image = "/og-morinigo.jpg" }) {
   const url = `${company.domain}${path}`;
   const fullTitle = title.includes(company.name) ? title : `${title} | ${company.name}`;
 

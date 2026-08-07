@@ -20,11 +20,15 @@ const libre = Libre_Baskerville({
 });
 
 export const metadata = buildMetadata({
-  title: "Morínigo & Asociados | Auditores y Consultores de Empresas",
+  title: "Morínigo & Asociados | Estudio Contable - Jurídico",
   description:
     "Servicios contables, tributarios, administrativos, económicos, legales, auditoría y consultoría empresarial en Paraguay.",
   path: "/",
 });
+
+export const viewport = {
+  themeColor: "#173b5f",
+};
 
 export default function RootLayout({ children }) {
   return (

@@ -59,7 +59,8 @@ export const serviceCategories = [
       "Consultoría en el sector público",
       "Mejora y reingeniería organizacional en base a proyectos",
       "Sistema de gestión por procesos de negocios"
-    ]
+    ],
+    image: "/brand/flyer-contrataciones-publicas.jpeg"
   },
   {
     slug: "derecho-civil-comercial-societario",
@@ -81,7 +82,8 @@ export const serviceCategories = [
       "Rubricación de libros y obtención de constancias judiciales",
       "Trámites de asambleas ordinarias y extraordinarias",
       "Modificación de estatutos sociales y trámites de aprobación"
-    ]
+    ],
+    image: "/brand/flyer-juridica-integral.jpeg"
   },
   {
     slug: "propiedad-intelectual-marcas-patentes",
@@ -100,7 +102,9 @@ export const serviceCategories = [
       "Nombres de dominios",
       "Competencia desleal",
       "Derecho de la publicidad"
-    ]
+    ],
+    image: "/brand/flyer-propiedad-intelectual.jpeg",
+    image2: "/brand/flyer-marcas-patentes.jpeg"
   },
   {
     slug: "laboral-seguridad-social",
@@ -162,7 +166,8 @@ export const serviceCategories = [
       "Asesoramiento en trámites consulares",
       "Homologación de títulos universitarios y licencias de conducir",
       "Tramitación de antecedentes penales"
-    ]
+    ],
+    image: "/brand/flyer-tramites-migraciones.jpeg"
   },
   {
     slug: "derecho-familia",

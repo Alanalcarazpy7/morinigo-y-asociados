@@ -146,8 +146,8 @@ export default function ServiceDetailPage({ service }) {
                       lineHeight: 1.5,
                     }}
                   >
-                    Morínigo &amp; Asociados — Auditores y Consultores de
-                    Empresas. Asunción, Paraguay.
+                    Morínigo &amp; Asociados — Estudio Contable - Jurídico.
+                    Asunción, Paraguay.
                   </p>
                 </div>
               </div>
@@ -170,6 +170,47 @@ export default function ServiceDetailPage({ service }) {
 
             {/* ── Contenido principal ── */}
             <div>
+              {/* Imagen(es) del servicio */}
+              {service.image && (
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: service.image2 ? "1fr 1fr" : "1fr",
+                    gap: "14px",
+                    marginBottom: "32px",
+                  }}
+                >
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    style={{
+                      width: "100%",
+                      aspectRatio: "1 / 1",
+                      objectFit: "contain",
+                      background: "var(--color-navy)",
+                      borderRadius: "12px",
+                      boxShadow: "0 16px 40px rgba(23,59,95,0.16)",
+                      display: "block",
+                    }}
+                  />
+                  {service.image2 && (
+                    <img
+                      src={service.image2}
+                      alt={`${service.title} — información adicional`}
+                      style={{
+                        width: "100%",
+                        aspectRatio: "1 / 1",
+                        objectFit: "contain",
+                        background: "var(--color-navy)",
+                        borderRadius: "12px",
+                        boxShadow: "0 16px 40px rgba(23,59,95,0.16)",
+                        display: "block",
+                      }}
+                    />
+                  )}
+                </div>
+              )}
+
               {/* Descripción */}
               <div className="rich-text" style={{ marginBottom: "36px" }}>
                 <p className="eyebrow">Alcance del servicio</p>

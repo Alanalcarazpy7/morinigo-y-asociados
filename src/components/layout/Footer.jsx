@@ -34,23 +34,53 @@ export default function Footer() {
         <div className="container footer-grid">
           {/* ─ Col 1: Marca + redes ─ */}
           <div>
-            <img
-              src="/brand/logo-morinigo-horizontal.png"
-              alt="Morínigo & Asociados"
-              width="210"
-              height="48"
+            <div
               style={{
-                filter: "brightness(0) invert(1)",
-                opacity: 0.88,
-                display: "block",
+                display: "flex",
+                alignItems: "center",
+                gap: "12px",
                 marginBottom: "16px",
               }}
-            />
+            >
+              <img
+                src="/brand/logo-icon.png"
+                alt="Morínigo & Asociados"
+                width="42"
+                height="42"
+                style={{ borderRadius: "9px", display: "block", flexShrink: 0 }}
+              />
+              <div>
+                <strong
+                  style={{
+                    display: "block",
+                    color: "white",
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "1.02rem",
+                    letterSpacing: "-0.01em",
+                    lineHeight: 1.2,
+                  }}
+                >
+                  Morínigo &amp; Asociados
+                </strong>
+                <small
+                  style={{
+                    display: "block",
+                    color: "rgba(255,255,255,0.55)",
+                    fontSize: "0.66rem",
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                    marginTop: "3px",
+                  }}
+                >
+                  {company.tagline}
+                </small>
+              </div>
+            </div>
             <p className="footer-muted" style={{ marginTop: 0, fontSize: "0.86rem", lineHeight: 1.6 }}>
               {company.tagline}
             </p>
             <p className="footer-muted" style={{ fontSize: "0.84rem", lineHeight: 1.6, marginTop: "8px" }}>
-              Auditores y Consultores de Empresas con sede en Asunción,
+              Estudio Contable - Jurídico con sede en Asunción,
               Paraguay. Desde {company.foundedYear}.
             </p>
 

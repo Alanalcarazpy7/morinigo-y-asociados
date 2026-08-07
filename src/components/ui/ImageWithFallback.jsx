@@ -7,15 +7,13 @@ import { useState } from "react";
  *
  * @param {string}  src          - Ruta de la imagen (ej. "/brand/firma-equipo.jpg")
  * @param {string}  alt          - Texto alternativo accesible
- * @param {string}  fallbackText - Texto grande en el fallback (ej. "M&A")
- * @param {string}  fallbackSub  - Texto pequeño debajo (ej. "Desde 1988")
+ * @param {string}  fallbackSub  - Texto pequeño debajo del ícono (ej. "Desde 1988")
  * @param {string}  className    - Clase CSS del contenedor
  * @param {object}  style        - Estilos extra del contenedor
  */
 export default function ImageWithFallback({
   src,
   alt,
-  fallbackText = "M&A",
   fallbackSub = "",
   className = "firm-image-block",
   style = {},
@@ -43,7 +41,7 @@ export default function ImageWithFallback({
         />
       ) : (
         <div className="firm-image-fallback">
-          <span>{fallbackText}</span>
+          <img src="/brand/logo-icon.png" alt="" width="64" height="64" style={{ borderRadius: "14px", opacity: 0.85 }} />
           {fallbackSub && <p>{fallbackSub}</p>}
         </div>
       )}

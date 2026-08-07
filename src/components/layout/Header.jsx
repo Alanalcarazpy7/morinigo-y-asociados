@@ -66,12 +66,16 @@ export default function Header() {
         {/* Logo */}
         <Link className="brand" href="/" aria-label={`${company.name} — Inicio`} onClick={closeMenu}>
           <img
-            src="/brand/logo-morinigo-horizontal.png"
-            alt="Morínigo & Asociados — Auditores y Consultores de Empresas"
-            className="brand-logo"
-            width="265"
-            height="60"
+            src="/brand/logo-icon.png"
+            alt=""
+            className="brand-logo-icon"
+            width="46"
+            height="46"
           />
+          <span className="brand-wordmark">
+            <strong>Morínigo &amp; Asociados</strong>
+            <small>{company.tagline}</small>
+          </span>
         </Link>
 
         {/* Navegación desktop */}

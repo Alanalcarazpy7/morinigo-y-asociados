@@ -112,13 +112,43 @@ img {
 .brand {
   display: inline-flex;
   align-items: center;
+  gap: clamp(8px, 2.4vw, 12px);
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.brand-logo-icon {
+  width: clamp(32px, 9vw, 46px);
+  height: clamp(32px, 9vw, 46px);
+  border-radius: 10px;
+  display: block;
   flex-shrink: 0;
 }
 
-.brand-logo {
-  width: 280px;
-  height: auto;
-  display: block;
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  min-width: 0;
+}
+
+.brand-wordmark strong {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(0.86rem, 4vw, 1.28rem);
+  font-weight: 700;
+  color: var(--color-navy);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.brand-wordmark small {
+  font-size: clamp(0.5rem, 1.7vw, 0.64rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-top: 2px;
+  white-space: nowrap;
 }
 
 /* Desktop nav — visible >1100px */
@@ -752,20 +782,12 @@ img {
     display: flex;
   }
 
-  .brand-logo {
-    width: 240px;
-  }
-
   .navbar {
     height: 74px;
   }
 }
 
 @media (max-width: 640px) {
-  .brand-logo {
-    width: 210px;
-  }
-
   .navbar {
     height: 68px;
   }
@@ -1209,11 +1231,6 @@ img {
 }
 
 @media (max-width: 640px) {
-  .brand-logo {
-    width: 210px;
-    /* ya definido en el nuevo breakpoint, aquí como fallback */
-  }
-
   .institutional-hero h1 {
     font-size: clamp(2rem, 11vw, 3.1rem);
   }

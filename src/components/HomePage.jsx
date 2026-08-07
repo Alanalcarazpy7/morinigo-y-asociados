@@ -55,16 +55,11 @@ function HeroImage() {
         }}
         aria-hidden="true"
       >
-        <span
-          style={{
-            fontSize: "7rem",
-            fontWeight: 900,
-            color: "rgba(255,255,255,0.05)",
-            letterSpacing: "-0.06em",
-          }}
-        >
-          M&amp;A
-        </span>
+        <img
+          src="/brand/logo-icon.png"
+          alt=""
+          style={{ width: "140px", height: "140px", borderRadius: "28px", opacity: 0.12 }}
+        />
       </div>
     );
   }
@@ -103,7 +98,7 @@ export default function HomePage() {
 
           {/* ── Columna izquierda: texto ── */}
           <div className="institutional-hero__content">
-            <p className="hero-kicker">Auditores y Consultores de Empresas</p>
+            <p className="hero-kicker">Estudio Contable - Jurídico</p>
 
             <h1 style={{ textShadow: "0 2px 32px rgba(0,0,0,0.18)" }}>
               Asesoramiento contable, tributario y jurídico para empresas en

@@ -1,7 +1,7 @@
 export const company = {
   name: "Morínigo & Asociados",
-  legalName: "Morínigo & Asociados - Auditores y Consultores de Empresas",
-  tagline: "Auditores y Consultores de Empresas",
+  legalName: "Morínigo & Asociados - Estudio Contable - Jurídico",
+  tagline: "Estudio Contable - Jurídico",
   foundedYear: 1988,
   domain: "https://www.morinigoyasociados.com.py",
   email: "recepcionmorinigoyasociados@gmail.com",

@@ -38,13 +38,29 @@ export default function CompanyPage() {
           <p className="eyebrow">La Firma</p>
           <h1>{company.name}</h1>
           <p>
-            Auditores y Consultores de Empresas con sede en Asunción, Paraguay.
+            Estudio Contable - Jurídico con sede en Asunción, Paraguay.
             Desde {company.foundedYear} brindamos servicios profesionales en
             contabilidad, tributación, auditoría, consultoría y asesoramiento
             legal corporativo.
           </p>
         </Container>
       </section>
+
+      {/* ——— BANNER INSTITUCIONAL ——— */}
+      <Container>
+        <img
+          src="/brand/hero-banner.jpeg"
+          alt="Equipo de Morínigo & Asociados — Estudio Contable - Jurídico"
+          style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+            borderRadius: "14px",
+            marginTop: "40px",
+            boxShadow: "0 16px 40px rgba(23,59,95,0.16)",
+          }}
+        />
+      </Container>
 
       {/* ——— DESDE 1988 + IMAGEN ——— */}
       <section className="section" aria-labelledby="firma-historia-title">
@@ -53,7 +69,6 @@ export default function CompanyPage() {
           <ImageWithFallback
             src="/brand/firma-equipo.jpg"
             alt="Equipo de Morínigo &amp; Asociados"
-            fallbackText="M&A"
             fallbackSub={`Desde ${company.foundedYear}`}
             style={{
               boxShadow: "0 24px 60px rgba(0,0,0,0.28), 0 0 0 1px rgba(104,185,223,0.1)",
